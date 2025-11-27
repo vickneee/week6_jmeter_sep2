@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${env.PATH}"
         JMETER_HOME = "/opt/homebrew/opt/jmeter"
-        PATH = "${JMETER_HOME}\\bin;${env.PATH}"
     }
 
     tools {
