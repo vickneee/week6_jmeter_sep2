@@ -20,7 +20,7 @@ pipeline {
 
         stage('Non-Functional Test') {
             steps {
-                sh 'jmeter -n -t tests/performance/demo.jmx -l result.jtl'
+                sh '/opt/homebrew/opt/jmeter -n -t tests/performance/demo.jmx -l result.jtl'
             }
         }
     }
