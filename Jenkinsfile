@@ -2,13 +2,12 @@ pipeline {
     agent any
 
     environment {
-        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${env.PATH}"
         JMETER_HOME = "/opt/homebrew/opt/jmeter"
     }
 
     tools {
-        maven 'Maven3'
-        jdk 'JAVA_17'
+        maven 'Maven3' // Maven tools in Jenkins
+        jdk 'JAVA_17' // Java tools in Jenkins
     }
 
     stages {
@@ -20,7 +19,7 @@ pipeline {
 
         stage('Non-Functional Test') {
             steps {
-                sh '/opt/homebrew/opt/jmeter/bin/jmeter -n -t tests/performance/demo.jmx -l result.jtl'
+                sh '${env.JMETER_HOME}/bin/jmeter -n -t tests/performance/demo.jmx -l result.jtl'
             }
         }
     }
