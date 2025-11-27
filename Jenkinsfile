@@ -2,12 +2,13 @@ pipeline {
     agent any
 
     environment {
-        JMETER_HOME = "/opt/homebrew/opt/jmeter"
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${env.PATH}"
+        JMETER_HOME = "/opt/homebrew/opt/jmeter" // JMeter installation path
     }
 
     tools {
-        maven 'Maven3' // Maven tools in Jenkins
-        jdk 'JAVA_17' // Java tools in Jenkins
+        maven 'Maven3' // Maven tool configured in Jenkins
+        jdk 'JAVA_17' // JDK configured in Jenkins
     }
 
     stages {
