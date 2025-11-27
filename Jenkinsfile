@@ -2,14 +2,14 @@ pipeline {
     agent any
 
     environment {
-        JAVA_17 = "/Users/victoriavavulina/Library/Java/JavaVirtualMachines/corretto-17.0.14/Contents/Home"
+        // JAVA_17 = "/Users/victoriavavulina/Library/Java/JavaVirtualMachines/corretto-17.0.14/Contents/Home"
         JMETER_HOME = "/opt/homebrew/opt/jmeter"
         PATH = "${JAVA_17}\\bin;${JMETER_HOME}\\bin;${env.PATH}"
     }
 
     tools {
         maven 'Maven3'
-        java
+        java 'JAVA_17'
     }
 
     stages {
