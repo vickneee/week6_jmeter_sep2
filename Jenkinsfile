@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        JAVA_HOME = "/Users/victoriavavulina/Library/Java/JavaVirtualMachines/openjdk-24.0.1/Contents/Home"
+        JAVA_HOME = "/Library/Java/JavaVirtualMachines/amazon-corretto-17.jdk/Contents/Home"
         JMETER_HOME = "/opt/homebrew/opt/jmeter"
         PATH = "${JAVA_HOME}\\bin;${JMETER_HOME}\\bin;${env.PATH}"
     }
