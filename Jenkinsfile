@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        JMETER_HOME=/opt/homebrew/opt/jmeter'
+        JMETER_HOME=/opt/homebrew/opt/jmeter
         PATH = "${JAVA_HOME}\\bin;${JMETER_HOME}\\bin;${env.PATH}"
     }
 
